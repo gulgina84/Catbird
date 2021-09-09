@@ -15,13 +15,52 @@ const AddQuestionForm = ({ product_name, product_id, closeAddQuestionModal }) =>
   const [ body, setBody ] = useState('');
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
+  const [ validateBody, setValidateBody ] = useState(false);
+  const [ validateName, setValidateName ] = useState(false);
+  const [ validateEmail, setValidateEmail ] = useState(false);
+  const [submited, setSubmited] = useState(false);
+
   const productIdNumber = Number(product_id);
 
+  const handleValidation = () =>{
+    if(body.length !== 0 ){
+      setValidateBody(true);
+    }
+    if(name.length !== 0 ){
+      setValidateName(true);
+    }
+    if(email.length !== 0 ){
+      setValidateEmail(true);
+    }
+  };
+
+  const handleBodyChange = (e) =>  {
+    setBody(e.target.value);
+    if(body.length !== 0 ){
+      setValidateBody(true);
+    }
+  };
+
+  const handleNameChange = (e) =>  {
+    setName(e.target.value);
+    if(name.length !== 0 ){
+      setValidateName(true);
+    }
+  };
+  const handleEmailChange = (e) =>  {
+    setEmail(e.target.value);
+    if(email.length !== 0 ){
+      setValidateEmail(true);
+    }
+  };
 
   const handleSubmit = (e)=> {
     e.preventDefault();
-
-    dispatch({ type: 'TOGGLE_ADD_QUESTION'});
+    setSubmited(true);
+    // handleValidation();
+    if(validateBody && validateName && validateEmail ) {
+      dispatch({ type: 'TOGGLE_ADD_QUESTION'});
+    }
 
     axios.post(`${API_URL}/qa/questions`, {
       body: body,
@@ -45,10 +84,11 @@ const AddQuestionForm = ({ product_name, product_id, closeAddQuestionModal }) =>
         <Form.Control
           as="textarea"
           value={body}
-          onChange={e => setBody(e.target.value)}
+          onChange={e => handleBodyChange(e)}
           placeholder="Your Question"
           style={{ height: '100px' }}
           />
+          {!validateBody && submited ? <div className="validate">This field can not be empty</div> : null}
     </Form.Group>
 
     <Form.Group controlId="nickName">
@@ -56,9 +96,10 @@ const AddQuestionForm = ({ product_name, product_id, closeAddQuestionModal }) =>
         <Form.Control
           type="text"
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={e => handleNameChange(e)}
           placeholder="What is your nickname?"
           />
+          {!validateName && submited ? <div className="validate">This field can not be empty</div> : null}
     </Form.Group>
 
     <Form.Group controlId="email">
@@ -68,8 +109,9 @@ const AddQuestionForm = ({ product_name, product_id, closeAddQuestionModal }) =>
           placeholder="Your email"
           maxLength={60}
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={e => handleEmailChange(e)}
           />
+          {!validateEmail && submited ? <div className="validate">This field can not be empty</div> : null}
     </Form.Group>
     <br/>
       <Container className="modalTwoButtons">
