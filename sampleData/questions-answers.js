@@ -337,15 +337,15 @@ module.exports = {
           "photos": [
               {
                   "id": 772457,
-                  "url": "https://images.unsplash.com/photo-1530519729491-aea5b51d1ee1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80"
+                  "url": "https://lp2.hm.com/hmgoepprod?set=width[960],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/hm-magazine-2019/inside-hm/19_12_A_League_brittany2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"
               },
               {
                   "id": 772458,
-                  "url": "https://images.unsplash.com/photo-1511127088257-53ccfcc769fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  "url": "https://lp2.hm.com/hmgoepprod?set=width[960],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/hm-magazine-2019/inside-hm/19_12_A_League_ellen2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"
               },
               {
                   "id": 772459,
-                  "url": "https://images.unsplash.com/photo-1500603720222-eb7a1f997356?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80"
+                  "url": "https://lp2.hm.com/hmgoepprod?set=width[960],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/hm-magazine-2019/inside-hm/19_12_A_League_Jill2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"
               }
           ]
       },
@@ -390,7 +390,7 @@ module.exports = {
           "photos": [
               {
                   "id": 1752329,
-                  "url": "https://miro.medium.com/max/2320/1*t_G1kZwKv0p2arQCgYG7IQ.gif"
+                  "url": "https://lp2.hm.com/hmgoepprod?set=width[960],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/hm-magazine-2019/inside-hm/19_12_A_League_brockandchris_3.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"
               }
           ]
       },
@@ -411,7 +411,7 @@ module.exports = {
           "photos": [
               {
                   "id": 2397378,
-                  "url": "https://firebasestorage.googleapis.com/v0/b/sunlit-analyst-318318.appspot.com/o/images%2Fboxer.jpeg?alt=media&token=b8ed6b35-bc30-4632-a778-141850cdafc8"
+                  "url": "https://lp2.hm.com/hmgoepprod?set=width[960],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/hm-magazine-2019/inside-hm/19_12_A_League_casey2.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"
               }
           ]
       }

@@ -163,26 +163,19 @@
 /* qna */
 
 .answerStamp {
-  font-size: clamp(10px, 2vw, 16px);
-  color:gray;
+  font-size: clamp(10px, 2vw, 14px);
+  color:rgb(160, 158, 158);
   margin: none;
   border: none;
-
   display: inline-block;
-
   margin-left: 1em;
   white-space : nowrap;
   overflow : hidden;
-
-
 }
 
 .stamps {
   align-content: center;
 }
-
-
-
 
 .questionHeader {
   display: flex;
@@ -207,7 +200,7 @@
 
 .helpfulBody {
   padding-right: 8px;
-  border-right: 0.1em solid gray;
+  border-right: 0.1em solid rgb(160, 158, 158);;
   height: 20px;
 }
 
@@ -217,7 +210,7 @@
 }
 
 .qna-title {
-  font-size: clamp(15px, 3vw, 25px);
+  font-size: clamp(15px, 3vw, 22px);
   font-family: Arial, Helvetica, sans-serif;
   color:gray;
   flex:1;
@@ -225,10 +218,11 @@
 }
 
 .qna-title-head {
-  font-size: clamp(15px, 3vw, 25px);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(15px, 3vw, 22px);
+  /* font-family: Arial, Helvetica, sans-serif; */
   color:gray;
   flex:1;
+  font-weight: lighter;
 }
 
 
@@ -239,9 +233,9 @@
 }
 
 .qna-q {
-  font-size: clamp(16px, 3vw, 25px);
+  font-size: clamp(16px, 3vw, 20px);
   color:gray;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-style:initial;
 
 }
@@ -249,8 +243,8 @@
 .markHelpful {
   border: none;
   background:transparent;
-  font-size: clamp(10px, 2vw, 16px);
-  color: gray;
+  font-size: clamp(10px, 2vw, 14px);
+  color:rgb(160, 158, 158);
 
 }
 
@@ -265,8 +259,8 @@
 }
 
 .addanswer {
-  font-size: clamp(10px, 2vw, 16px);
-  color:gray;
+  font-size: clamp(10px, 2vw, 14px);
+  color:rgb(160, 158, 158);
   margin: none;
   font-family: math;
 }
@@ -277,9 +271,9 @@
 }
 
 .questionHelpfulness {
-  font-size: clamp(10px, 2vw, 16px);
+  font-size: clamp(10px, 2vw, 14px);
   font-family: math;
-  color:gray;
+  color:rgb(160, 158, 158);
 }
 
 .twoMainButton button {
@@ -322,12 +316,12 @@
 
 
 .see-more-answers {
-  font-size: clamp(12px, 2vw, 18px);
+  font-size: clamp(12px, 2vw, 16px);
   font-family: math;
-  color:gray;
+  color:rgb(100, 98, 98);
   background-color: Transparent;
   border: none;
-  margin-left: 3%;
+  margin-left: .5rem;
   margin-bottom: none;
   outline:none;
 }
@@ -340,10 +334,10 @@
 .filteredQuestionList {
   text-align: left;
   padding: 0;
-  /* padding-top: 15px; */
   margin-left: 0;
 
 }
+
 
 
 .filteredList {
@@ -351,7 +345,10 @@
   padding:0;
   text-align: left;
   list-style-type: none;
-
+}
+.qListContainer{
+  margin-top: 1rem;
+  width: 100%;
 }
 
 .multi-preview-img {
@@ -365,22 +362,31 @@
   height: auto;
   align-self: center;
   justify-self: center;
-  border: .1em solid black;
+  outline: .1em solid rgb(168, 162, 162);
   margin-left: clamp(20px, 2vw, 30px);
   margin-top: clamp(10px, 2vw, 20px);
   margin-bottom: clamp(10px, 2vw, 20px);
+  opacity: 0.9;
+  transition: 200ms ease-in-out;
+}
 
+.answer-small:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.03);
 }
 
 .photo-dialog{
-
   align-self: center;
   position: relative;
-
+  padding: 0;
 }
 .photo-dialog .modal-content {
   height: fit-content;
   width: auto;
+  margin: 0;
+  border: 0;
+  padding:0;
 }
 
 
@@ -405,4 +411,9 @@
 }
 .active-rating {
   font-weight: bold;
+}
+
+.qnaScroll{
+  overflow: scroll;
+  height: 76rem;
 }

@@ -48,8 +48,9 @@ const SearchQuestions = () => {
 
 
   return (
-    <div>
-      <div>
+    <div className="searchQuestionContainer">
+      <Container>
+        <Row>
         <form className="form">
           <input
             role="search-input"
@@ -60,22 +61,19 @@ const SearchQuestions = () => {
             />
           <SearchIcon className="searchIcon"/>
          </form>
-      </div>
+         </Row>
+      </Container>
 
 
 
-      <div className="filteredQuestionList">
+      <Container className="filteredQuestionList">
       { searchBarTyped ?
-            <div
-              data-testid="filteredQuestionList"
-              className="filteredQuestionList"
-            >
-               <br />
+            <div data-testid="filteredQuestionList">
+               {/* <br /> */}
               <QuestionsList qnaList={filteredData}/>
-
             </div> : null
       }
-      </div>
+      </Container>
     </div>
   )
 }

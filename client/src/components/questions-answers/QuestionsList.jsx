@@ -10,16 +10,18 @@ const QuestionsList = ({ qnaList, getMoreQuestions, noMoreQuestion }) => {
 
      let qList = qnaList.map(question => {
      return (
-      <ListGroup.Item key={'QuestionsList' + question.question_id} >
+      <div key={'QuestionsList' + question.question_id} >
         <IndividualQuestion question={question} />
-      </ListGroup.Item>
+      </div>
 
       )
   })
 
+
+
   return (
     <Container>
-      <ListGroup variant="flush">
+      <ListGroup variant="flush" className="qnaScroll">
         {qList}
       </ListGroup>
 

@@ -40,13 +40,14 @@ var qnaListShown = qnaList.slice(0, count);
 
     if (qnaList.length !==0 && !searchBarTyped) {
        return (
-
+        <div className="notFilteredqList">
         <QuestionsList
           data-testid="questionList"
           qnaList={qnaListShown}
           getMoreQuestions={getMoreQuestions}
           noMoreQuestion={noMoreQuestion}
         />
+        </div>
 
        )
     }
@@ -74,7 +75,7 @@ var qnaListShown = qnaList.slice(0, count);
 
 
   return (
-    <Container>
+    <Container className="qnaComponent" >
       <br />
       <Row>
         <Col>
@@ -88,13 +89,9 @@ var qnaListShown = qnaList.slice(0, count);
         </Col>
      </Row>
       <br />
-      <Container fluid className="flex-nowrap text-center">
-      <Row>
-          <Col>
+      <div fluid className="flex-nowrap text-center qnaComponent">
             <SearchQuestions qnaList={qnaList}/>
-          </Col>
-        </Row>
-        </Container>
+        </div>
       <Row>
         {rennderComponents() }
       </Row>

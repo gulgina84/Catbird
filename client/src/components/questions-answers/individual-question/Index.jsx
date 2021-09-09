@@ -4,6 +4,7 @@ import { actionCreators } from '../../../redux/index.js';
 import AnswerList from './AnswerList.jsx';
 import AddAnswer from '../add-answer-model/Index.jsx';
 import QuestionHelpfulness from './QuestionHelpfulness.jsx';
+import { answers } from '../../../../../sampleData/questions-answers.js';
 
   const IndividualQuestion = ({ question }) => {
 
@@ -15,7 +16,7 @@ import QuestionHelpfulness from './QuestionHelpfulness.jsx';
     const markQuestionHelpful = actionCreators.markQuestionHelpful;
     const dispatch = useDispatch();
     const fetchAnswerList = actionCreators.fetchAnswerList;
-    const [answerList, setAnswerList ] = useState([]);
+    const [answerList, setAnswerList ] = useState(answers);
     const [addHelpfulUsed, setAddHelpfulUsed ] = useState(false);
 
     const addHelpfulness = () => {
@@ -30,13 +31,13 @@ import QuestionHelpfulness from './QuestionHelpfulness.jsx';
      }
     };
 
-    useEffect(() => {
-      fetchAnswerList(question_id, 1, 1000)
-      .then(result => {
-        setAnswerList(result.data.results)
-      })
-      .catch(err => console.log('error from fetching answerslist', err ))
-    }, [question_id])
+    // useEffect(() => {
+    //   fetchAnswerList(question_id, 1, 1000)
+    //   .then(result => {
+    //     setAnswerList(result.data.results)
+    //   })
+    //   .catch(err => console.log('error from fetching answerslist', err ))
+    // }, [question_id])
 
     const sortedAnswerList = answerList.sort((a, b) => { return b.helpfulness - a.helpfulness});
 

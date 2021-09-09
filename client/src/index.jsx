@@ -8,9 +8,9 @@ import LogClicks from './components/LogClicks.jsx';
 
 ReactDOM.render(
   <Provider store={store}>
-    <LogClicks>
+    {/* <LogClicks> */}
       <App />
-    </LogClicks>
+    {/* </LogClicks> */}
   </Provider>,
   document.getElementById('app')
 );

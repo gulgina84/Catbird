@@ -20,11 +20,17 @@ const AnswerHelpfulness = ( { helpfulness, addHelpfulness, addHelpfulUsed, repor
        disabled={addHelpfulUsed}
        >Yes ({helpful})
      </button>
+     {!reportClicked ?
      <button
         className="markHelpful"
         onClick={reportAnswer}
         >Report
-     </button>
+     </button> :
+       <button
+       disabled
+       className="markHelpful"
+       >Reported
+    </button>}
     </div>
    )
 

@@ -1,6 +1,6 @@
+import { questions } from '../../../../sampleData/questions-answers';
 
-
-export const qnaListReducer = (state = [], action) => {
+export const qnaListReducer = (state = questions, action) => {
   switch (action.type) {
     case 'FETCH_QUESTION_LIST':
       return action.questionList;
